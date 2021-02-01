@@ -340,7 +340,7 @@ div.category > div:nth-child(odd) {
     padding-bottom: 115px;
 }
 
-.button__block > button {
+.browse_all_link {
     margin: 0px auto;
     display: block;
     background-color: #f16d7f;
@@ -348,8 +348,16 @@ div.category > div:nth-child(odd) {
     height: 50px;
     color: white;
     font-size: 16px;
+    line-height: 50px;
+    text-align: center;
+    border:1px solid #f16d7f;
 }
 
+.browse_all_link:hover {
+    color: #f16d7f;
+    background-color: white;
+    
+}
 
 /******* feature__block **********/
 
