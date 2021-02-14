@@ -140,7 +140,7 @@ header {
     list-style-type: none;
     height: 50px;
     line-height: 50px;
-    margin: 0 25px;
+    padding: 0 25px;
 }
 
 .menu-list:hover a {
@@ -346,15 +346,17 @@ h3.drop__down_h:nth-child(3) {
 }
 
 /******* mega_menue *****************/
-
-.header__menu > nav:hover .mega_menue {
+.menu-list {
+    position: relative;
+}
+.menu-list:hover > .mega_menue {
     display: block;
 }
 
 .mega_menue {
     position: absolute;
-    left: 293px;
-    right: 0px;
+    left: 0px;
+
     top: 47px;
     background-color: white;
     z-index: 3;
@@ -362,8 +364,30 @@ h3.drop__down_h:nth-child(3) {
     border: 1px solid #e6e6e6;
     display: none;
     box-shadow: 0px 7px 6px 0px rgba(34, 60, 80, 0.2);
+    width: 846px;
 }
-
+.mega_menue_right {
+    left: unset;
+    right: 0px;
+}
+.mega_menue::before {
+    content:"";
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border:1px solid #e6e6e6;
+    top:-5px;
+    left: 20px;
+    transform: rotate(45deg);
+    background-color: #fff;
+    border-bottom: 0px;
+    border-right: 0px;
+}
+.mega_menue_right::before {
+    left: unset;
+    right:20px;
+}
 .mega_menue_col {
     width: 236px;
     padding: 20px 20px 20px 26px;
